@@ -7,9 +7,9 @@ def CalculationOfArea(A, B, C):
 
     vectorAB = A - B
     vectorAC = A - C
-
+#cross_product calculation
     cross_product = np.cross(vectorAB, vectorAC)
-
+#magnitude calculation
     magnitude = np.linalg.norm(cross_product)
 
     area = 0.5 * magnitude
