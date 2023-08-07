@@ -14,65 +14,8 @@
 \usepackage{mathtools}
 \usepackage{gensymb}
 \usepackage[breaklinks=true]{hyperref}
-\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{tkz-euclide} 
 \usepackage{listings}
-
-%
-%\usepackage{setspace}
-%\usepackage{gensymb}
-%\doublespacing
-%\singlespacing
-
-%\usepackage{graphicx}
-%\usepackage{amssymb}
-%\usepackage{relsize}
-%\usepackage[cmex10]{amsmath}
-%\usepackage{amsthm}
-%\interdisplaylinepenalty=2500
-%\savesymbol{iint}
-%\usepackage{txfonts}
-%\restoresymbol{TXF}{iint}
-%\usepackage{wasysym}
-%\usepackage{amsthm}
-%\usepackage{iithtlc}
-%\usepackage{mathrsfs}
-%\usepackage{txfonts}
-%\usepackage{stfloats}
-%\usepackage{bm}
-%\usepackage{cite}
-%\usepackage{cases}
-%\usepackage{subfig}
-%\usepackage{xtab}
-%\usepackage{longtable}
-%\usepackage{multirow}
-%\usepackage{algorithm}
-%\usepackage{algpseudocode}
-%\usepackage{enumitem}
-%\usepackage{mathtools}
-%\usepackage{tikz}
-%\usepackage{circuitikz}
-%\usepackage{verbatim}
-%\usepackage{tfrupee}
-%\usepackage{stmaryrd}
-%\usetkzobj{all}
-%    \usepackage{color}                                            %%
-%    \usepackage{array}                                            %%
-%    \usepackage{longtable}                                        %%
-%    \usepackage{calc}                                             %%
-%    \usepackage{multirow}                                         %%
-%    \usepackage{hhline}                                           %%
-%    \usepackage{ifthen}                                           %%
-  %optionally (for landscape tables embedded in another document): %%
-%    \usepackage{lscape}     
-%\usepackage{multicol}
-%\usepackage{chngcntr}
-%\usepackage{enumerate}
-
-%\usepackage{wasysym}
-%\documentclass[conference]{IEEEtran}
-%\IEEEoverridecommandlockouts
-% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
-
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
 \newtheorem{proposition}{Proposition}[section]
@@ -80,10 +23,6 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{example}{Example}[section]
 \newtheorem{definition}[problem]{Definition}
-%\newtheorem{thm}{Theorem}[section] 
-%\newtheorem{defn}[thm]{Definition}
-%\newtheorem{algorithm}{Algorithm}[section]
-%\newtheorem{cor}{Corollary}
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
@@ -104,7 +43,7 @@
 Assignment-1
 %	}
 }
-\author{EE22BTECH11012-A.Chatrapati}
+\author{EE22BTECH11012-A.Chhatrapati}
 
 
 \maketitle
@@ -145,9 +84,7 @@ Assignment-1
 }{%
   \end{array}\right)
 }
-%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
-%\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+
 \newcommand{\solution}{\noindent \textbf{Solution: }}
 \newcommand{\cosec}{\,\text{cosec}\,}
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
@@ -168,45 +105,30 @@ Assignment-1
 \newcommand\tabref{Table~\ref}
 \newcommand{\sinc}{\,\text{sinc}\,}
 \newcommand{\rect}{\,\text{rect}\,}
-%%
-%	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
-%\newcommand{\solution}{\noindent \textbf{Solution: }}
-%\newcommand{\cosec}{\,\text{cosec}\,}
-%\numberwithin{equation}{section}
-%\numberwithin{equation}{subsection}
-%\numberwithin{problem}{section}
-%\numberwithin{definition}{section}
-%\makeatletter
-%\@addtoreset{figure}{problem}
-%\makeatother
-
-%\let\StandardTheFigure\thefigure
 \let\vec\mathbf
 
 Question 1.1.6.)The area of $\Delta$ ABC is defined as $$\frac{1}{2}||(\vec{A}-\vec{B})\times\vec{A}-\vec{C}||$$ 
 where
-\begin{align*}
-\vec{A}\times\vec{B}=\mydet{1 & -4\\-1 & 6}
-\end{align*}
+$$\vec{A}\times\vec{B}=\mydet{1 & -4\\-1 & 6}$$
 Find the area of $\Delta$ ABC.\\[6pt]
 Ans)
 Given in the question that,
-\begin{align*}
+\begin{align}
 \vec{A} = \myvec{1\\-1};
 \vec{B} = \myvec{-4\\6};
 \vec{C} = \myvec{-3\\-5}
-\end{align*}
-Formula for area of $\Delta \text{ABC}=\dfrac{1}{2} ||(A-B)\times(A-C)||$
+\end{align}
+Formula for area of $\Delta \text{ABC}=\dfrac{1}{2} ||(\vec{A}-\vec{B})\times(\vec{A}-\vec{C})||$
 \begin{align}
 \text{Value of }\vec{A}-\vec{B}=\myvec{1\\-1}-\myvec{-4\\6}&=\myvec{5\\-7}\\
 \text{Value of }\vec{A}-\vec{C}=\myvec{1\\-1}-\myvec{-3\\-5}&=\myvec{4\\4}\\
-\therefore\vec(A-B)\times\vec(A-C) &=\mydet{5 & 4\\-7 & 4}
+\therefore(\vec{A}-\vec{B})\times(\vec{A}-\vec{C}) &=\mydet{5 & 4\\-7 & 4}
 \end{align}
-The value of Determinant is\\ 
-\begin{align*}
+The value of Determinant is
+\begin{align}
 \mydet{5 & 4\\-7 & 4}=5\times 4-4\times (-7)&=20+28=48\\
-\therefore ||\vec{A-B}\times\vec{A-C}||&=\sqrt{48^2}=48\\
-\text{So area of }\Delta \text{ABC}&=\dfrac{1}{2} ||(A-B)\times(A-C)||=\dfrac{48}{2}=24\\
-\therefore \text{Area of } \Delta \text{ABC}&=24square.units
-\end{align*}
+\therefore ||(\vec{A}-\vec{B})\times(\vec{A}-\vec{C})||&=\sqrt{48^2}=48\\
+\implies\dfrac{1}{2} ||(\vec{A}-\vec{B})\times(\vec{A}-\vec{C})||&=\dfrac{48}{2}=24
+\end{align}
+$\therefore \text{Area of } \Delta \text{ABC}=24square.units$
 \end{document}
