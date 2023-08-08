@@ -1,14 +1,10 @@
 import numpy as np
-
-def CalculationOfArea(A, B, C):
-    A = np.array(A)
-    B = np.array(B)
-    C = np.array(C)
-
-    vectorAB = A - B
-    vectorAC = A - C
+ 
+def AreaCalc(A, B, C):
+    AB = A - B
+    AC = A - C
 #cross_product calculation
-    cross_product = np.cross(vectorAB, vectorAC)
+    cross_product = np.cross(AB,AC)
 #magnitude calculation
     magnitude = np.linalg.norm(cross_product)
 
@@ -20,6 +16,8 @@ def CalculationOfArea(A, B, C):
 A = [1, -1]
 B = [-4, 6]
 C = [-3, -5]
-
-area_ABC = CalculationOfArea(A, B, C)
+A = np.array(A)
+B = np.array(B)
+C = np.array(C)
+area_ABC = AreaCalc(A, B, C)
 print("Area of triangle ABC:", area_ABC)
