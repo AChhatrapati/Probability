@@ -107,7 +107,8 @@ Assignment-2
 \newcommand{\rect}{\,\text{rect}\,}
 \let\vec\mathbf
 
-\textbf{Question 12.13.2.16)}In a hostel, 60\% of the students read Hindi newspaper, 40\% read English
+\textbf{Question 12.13.2.16}
+In a hostel, 60\% of the students read Hindi newspaper, 40\% read English
 newspaper and 20\% read both Hindi and English newspapers. A student is
 selected at random.
 \renewcommand{\labelenumi}{ (\alph{enumi})}
@@ -119,20 +120,28 @@ newspaper.
 newspaper.
 \end{enumerate}
 \solution
-Given,
+Given,\\
+\begin{tabular}{|c|c|c|}
+\hline
+Random Variables & Events & probability \\
+\hline
+$\pr{A}$ & The probability of reading Hindi newspaper. & $\frac{6}{10}$ \\
+\hline
+$\pr{B}$ & The probability of reading English newspaper. & $\frac{4}{10}$ \\ 
+\hline
+ $\pr{AB}$ & The probability of reading both Hindi and English newspaper. & $\frac{2}{10}$ \\
+ \hline
+ \end{tabular} 
 \begin{align}
-P(Hindi)=P(H)=60\%&=\frac{6}{10};\\
-P(English)=P(E)=40\%&=\frac{4}{10};\\
-P(H.E)=20\%&=\frac{2}{10}\\
-(a) P(H'.E')&=P((H+E)')\\
-&=1-P(H+E)\\
-&=1-(P(H)+P(E)-P(H.E))\\
+(a) \pr{A^{\prime}B^{\prime}}&=\pr{\brak{A+B}^{\prime}}\\
+&=1-\pr{A+B}\\
+&=1-\brak{\pr{A}+\pr{B}-\pr{AB}}\\
 &=1-\brak{\frac{6}{10}+\frac{4}{10}-\frac{2}{10}}\\
 &=\frac{2}{10}\\
-(b) P\brak{{\frac{E}{H}}}&=\frac{P(E.H)}{P(H)}\\
+(b) \pr{B|A}&=\frac{\pr{BA}}{\pr{A}}\\
 &=\frac{\frac{2}{10}}{\frac{6}{10}}\\
 &=\frac{1}{3}\\
-(c) P\brak{{\frac{H}{E}}}&=\frac{P(H.E)}{P(E)}\\
+(c) \pr{A|B}&=\frac{\pr{AB}}{\pr{B}}\\
 &=\frac{\frac{2}{10}}{\frac{4}{10}}\\
 &=\frac{1}{2}
 \end{align}
