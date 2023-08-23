@@ -106,8 +106,7 @@ Assignment-3
 \newcommand{\sinc}{\,\text{sinc}\,}
 \newcommand{\rect}{\,\text{rect}\,}
 \let\vec\mathbf
-
-\textbf{Question 10.13.3.37)}A child's game has 8 triangles of which 3 are blue and rest are red, and 10 squares of which 6 are blue and rest are red. One piece is lost at random. Find the probability that it is a \\
+\textbf{Question 10.13.3.37)}A child's game has 8 triangles of which 3 are blue and rest are red, and 10 squares of which 6 are blue and rest are red. One piece is lost at random. Find the probability that it is a
 \renewcommand{\labelenumi}{(\roman{enumi})}
 \begin{enumerate}
 \item triangle 
@@ -116,21 +115,33 @@ Assignment-3
 \item triangle of red colour           
 \end{enumerate}
 \solution
-Given,\\
-\begin{tabular}{|c|c|c|c|}
-\hline
-Pieces & Blue coloured & Red coloured & Total number \\
-\hline
-Triangle & 3 & 5 & 8 \\
-\hline
-Square & 6 & 4 & 10 \\ 
-\hline
-\end{tabular} 
+\begin{align}
+	 X &=
+	\begin{cases}
+		1, & \text{if a triangle piece is lost}\\ 
+		0, & \text{otherwise}
+	\end{cases}\\
+	Y &=
+	\begin{cases}
+		1, & \text{if a square piece is lost}\\ 
+		0, & \text{otherwise}
+	\end{cases}\\
+	A &=
+	\begin{cases}
+		1, & \text{if blue piece is lost}\\ 
+		0, & \text{otherwise}
+	\end{cases}\\
+	B &=
+	\begin{cases}
+		1, & \text{if red piece is lost}\\ 
+		0, & \text{otherwise}
+	\end{cases}
+\end{align}
 \begin{enumerate}
-\item Probability for lost piece is triangle=$\frac{8}{18}$
-\item Probability for lost piece is square=$\frac{10}{18}$
-\item Probability for lost piece is blue square=$\frac{6}{18}$
-\item Probability for lost piece is red triangle=$\frac{5}{18}$
+\item $p_X\brak{1}=\frac{8}{18}$
+\item $p_Y\brak{1}=\frac{10}{18}$
+\item $p_{YA}\brak{1}=\frac{6}{18}$
+\item $p_{XB}\brak{1}=\frac{5}{18}$
 \end{enumerate}
 
 \end{document}
