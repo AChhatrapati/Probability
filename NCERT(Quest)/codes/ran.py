@@ -296,7 +296,7 @@ plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.grid() # minor
 plt.axis('equal')
-plt.savefig("tri.png")
+plt.savefig("triangle.png")
 plt.clf()
 
 #graph with centroids
@@ -334,7 +334,7 @@ plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.axis('equal')
 plt.grid() # minor
-plt.savefig("centr.png")
+plt.savefig("centroid.png")
 plt.clf()
 
 #graph with altitudes
@@ -387,7 +387,7 @@ plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.axis('equal')
 plt.grid() # minor
-plt.savefig("alt.png")
+plt.savefig("altitude.png")
 plt.clf()
 
 
@@ -428,7 +428,7 @@ plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.axis('equal')
 plt.grid() # minor
-plt.savefig("cir.png")
+plt.savefig("circumcircle.png")
 plt.clf()
 
 #graph with incircle
@@ -470,4 +470,4 @@ plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.grid() # minor
 plt.axis('equal')
-plt.savefig("incir.png")
+plt.savefig("incircle.png")
