@@ -119,20 +119,18 @@ Assignment-3
 \hline
 Variable & Value & Description \\
 \hline
-X & 1 & Lost piece is Triangle \\
+X & 1 & Triangle \\
+ & 0 & Square \\ 
 \hline
-Y & 1 & Lost piece is Square \\ 
-\hline
-A & 1 & Lost piece is Blue coloured \\
-\hline
-B & 1 & Lost piece is Red coloured \\
+Y & 1 & Blue coloured \\
+ & 0 & Red coloured \\
 \hline
 \end{tabular} 
 \begin{enumerate}
 \item $p_X\brak{1}=\frac{8}{18}$
-\item $p_Y\brak{1}=\frac{10}{18}$
-\item $p_{YA}\brak{1}=\frac{6}{18}$
-\item $p_{XB}\brak{1}=\frac{5}{18}$
+\item $p_X\brak{0}=\frac{10}{18}$
+\item $p_{XY}\brak{X=0,Y=1}=\frac{6}{18}$
+\item $p_{XY}\brak{X=1,Y=0}=\frac{5}{18}$
 \end{enumerate}
 
 \end{document}
