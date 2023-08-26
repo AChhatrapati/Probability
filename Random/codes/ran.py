@@ -13,24 +13,20 @@ C = np.array([1, -3])
 m1 = B-A
 m2 = C-B
 m3 = A-C
-print("1.1.1")
 print("m=",m1,m2,m3)
 
 #1.1.2
 norm_m1 = np.linalg.norm(m1)
 norm_m2 = np.linalg.norm(m2)
 norm_m3 = np.linalg.norm(m3)
-print("1.1.2")
 print(norm_m1,norm_m2,norm_m3)
 
 #1.1.3
 mat1 = np.array([[1,1,1],[A[0],B[0],C[0]],[A[1],B[1],C[1]]])
 r1 = np.linalg.matrix_rank(mat1)
-print("1.1.3")
 print("rank=",r1)
 
 #1.1.4
-print("1.1.4")
 print("parametric of AB form is x:",A,"+ k",m1)
 print("parametric of BC form is x:",B,"+ k",m2)
 print("parametric of CA form is x:",C,"+ k",m3)
@@ -39,13 +35,11 @@ print("parametric of CA form is x:",C,"+ k",m3)
 n1 = omat@m1
 n2 = omat@m2
 n3 = omat@m3
-print("1.1.5")
 print("n=",n1,n2,n3)
 
 #1.1.6
 x = np.cross(m1,m2)
 area = 0.5*(np.linalg.norm(x))
-print("1.1.6")
 print("area=",area)
 
 #1.1.7
@@ -58,7 +52,6 @@ angle_B = np.degrees(np.arccos((dotB)/NormB))
 dotC = (A-C)@(B-C).T
 NormC = (np.linalg.norm(A-C))*(np.linalg.norm(B-C))
 angle_C = np.degrees(np.arccos((dotC)/NormC))
-print("1.1.7")
 print("angles=",angle_A,angle_B,angle_C)
 
 
@@ -66,7 +59,6 @@ print("angles=",angle_A,angle_B,angle_C)
 D = (B + C)/2
 E = (A + C)/2
 F = (A + B)/2
-print("1.2.1")
 print("D,E,F =",D,E,F)
 
 #1.2.2
@@ -76,13 +68,11 @@ m6 = F-C
 n4 = omat@m4
 n5 = omat@m5
 n6 = omat@m6
-print("1.2.2")
 print("m =",m4,m5,m6)
 print("n =",n4,n5,n6)
 
 #1.2.3
 G=(A+B+C)/3
-print("1.2.3")
 print("G =",G)
 
 #1.2.4
@@ -92,7 +82,6 @@ norm_BG = np.linalg.norm(B-G)
 norm_EG = np.linalg.norm(E-G)
 norm_CG = np.linalg.norm(C-G)
 norm_FG = np.linalg.norm(F-G)
-print("1.2.4")
 print("AG,DG,BG,EG,CG,FG =",norm_AG,norm_DG,norm_BG,norm_EG,norm_CG,norm_FG)
 
 #1.2.5
@@ -102,13 +91,11 @@ mat3 = np.array([[1,1,1],[B[0],E[0],G[0]],[B[1],E[1],G[1]]])
 r3 = np.linalg.matrix_rank(mat3)
 mat4 = np.array([[1,1,1],[C[0],F[0],G[0]],[C[1],F[1],G[1]]])
 r4 = np.linalg.matrix_rank(mat4)
-print("1.2.5")
 print("rank =",r2,r3,r4)
 
 #1.2.7
 AF = A-F
 ED = E-D
-print("1.2.7")
 print("AF,ED =",AF, ED)
 
 
@@ -116,7 +103,6 @@ print("AF,ED =",AF, ED)
 n7 = C-B
 n8 = A-C
 n9 = B-A
-print("1.3.2")
 print("Altidudes normal =",n7,n8,n9)
 
 #1.3.4
@@ -126,7 +112,6 @@ tan = np.tan(angles)
 hx=(A[0]*tan[0]+B[0]*tan[1]+C[0]*tan[2])/(tan[0]+tan[1]+tan[2])
 hy=(A[1]*tan[0]+B[1]*tan[1]+C[1]*tan[2])/(tan[0]+tan[1]+tan[2])
 H = np.array([hx,hy])
-print("1.3.4")
 print("H=",H)
 
 
@@ -155,12 +140,10 @@ def ccircle_R(A,B,C):
   r = np.linalg.norm(A +O)
   return r
 O = ccircle_O(A,B,C)
-print("1.4.2")
 print("circumcentre =",O)
 
 #1.4.4
 R = ccircle_R(A,B,C)
-print("1.4.4")
 print("radius =",R)
 
 
@@ -181,7 +164,6 @@ n12 = t/np.linalg.norm(t)
 m_a=norm_vec(n11,n12)
 m_b=norm_vec(n10,n12)
 m_c=norm_vec(n10,n11)
-print("1.5.1")
 print("slopes of angular bis",m_a,m_b,m_c)
 
 #1.5.2
@@ -204,7 +186,6 @@ def icircle(A,B,C):
   return I,r
   
 [I,i_r] = icircle(A,B,C)
-print("1.5.2")
 print("incentre =",I)
 
 #1.5.3
@@ -228,7 +209,6 @@ angle_ABI = angle_btw_vectors(BA, IB)
 angle_CBI = angle_btw_vectors(BC, IB)
 angle_BCI = angle_btw_vectors(BC, IC)
 angle_ACI = angle_btw_vectors(CA, IC)
-print("1.5.3")
 print("Angle BAI:", angle_BAI)
 print("Angle CAI:", angle_CAI)
 print("Angle ABI:", angle_ABI)
@@ -244,7 +224,6 @@ t3 = norm_vec(A,B)
 r1 = abs((t3@I) - (t3@A))/(np.linalg.norm(t3))   #r1 is distance between I and AB
 r2 = abs((t2@I) - (t2@C))/(np.linalg.norm(t2))   #r2 is distance between I and AC
 r3 = abs((t1@I) - (t1@C))/(np.linalg.norm(t1))   #r2 is distance between I and BC
-print("1.5.6")
 print("Distance between I and AB is",r1)
 print("Distance between I and AC is",r2)
 print("Distance between I and BC is",r3)
@@ -256,7 +235,6 @@ k3 = ((I-B)@(B-C))/((B-C)@(B-C))
 E3 = A+(k1*(A-C))
 F3 = A+(k2*(A-B))
 D3 = B+(k3*(B-C))
-print("1.5.7")
 print("E3 = ",E3)
 print("F3 = ",F3)
 print("D3 = ",D3)
