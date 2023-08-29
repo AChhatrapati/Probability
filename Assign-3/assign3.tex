@@ -115,28 +115,44 @@ Assignment-3
 \item triangle of red colour           
 \end{enumerate}
 \solution 
+\begin{table}[ht]
+    \centering
+    \caption{Random Variables}
+    \label{table:random-variables}
 \begin{tabular}{|c|c|c|}
 \hline
 Variable & Value & Description \\
 \hline
 X & 1 & Triangle \\
-\hline
-X & 0 & Square \\ 
+ & 0 & Square \\ 
 \hline
 Y & 1 & Blue coloured \\
-\hline
-Y & 0 & Red coloured \\
+ & 0 & Red coloured \\
 \hline
 \end{tabular} 
-$p_X\brak{X=0}=\frac{10}{18}\\
-p_X\brak{X=1}=\frac{8}{18}\\
-p_X\brak{Y=0}=\frac{9}{18}\\
-p_X\brak{Y=1}=\frac{9}{18}$
+\end{table}\\
+\begin{align}
+p_X\brak{X}&=
+\begin{cases}
+		\frac{10}{18}, & \text{if X=0}\\ 
+		\frac{8}{18}, & \text{if X=1}
+	\end{cases}\\
+\text{For X=0, } p_{Y|X}\brak{Y}&=
+\begin{cases}
+       \frac{4}{10}, & \text{if Y=0}\\
+       \frac{6}{10}, & \text{if Y=1}
+\end{cases}\\
+\text{For X=1, } p_{Y|X}\brak{Y}&=
+\begin{cases}
+       \frac{5}{8}, & \text{if Y=0}\\
+       \frac{3}{8}, & \text{if Y=1}
+\end{cases}
+\end{align}
 \begin{enumerate}
 \item $p_X\brak{1}=\frac{8}{18}$
 \item $p_X\brak{0}=\frac{10}{18}$
-\item $p_{XY}\brak{X=0,Y=1}=\pr{Y=1|X=0}p_{X}\brak{0}\\=\frac{6}{10}\times \frac{10}{18}=\frac{6}{18}$
-\item $p_{XY}\brak{X=1,Y=0}=\pr{Y=0|X=1}p_{X}\brak{1}\\=\frac{5}{8}\times \frac{8}{18}=\frac{5}{18}$
+\item $p_{XY}\brak{0,1}=p_{Y|X}\brak{Y=1|X=0}p_{X}\brak{0}\\=\frac{6}{10}\times \frac{10}{18}=\frac{6}{18}$
+\item $p_{XY}\brak{1,0}=p_{Y|X}\brak{Y=0|X=1}p_{X}\brak{1}\\=\frac{5}{8}\times \frac{8}{18}=\frac{5}{18}$
 \end{enumerate}
 
 \end{document}
