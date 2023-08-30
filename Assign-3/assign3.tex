@@ -137,22 +137,16 @@ p_X\brak{X}&=
 		\frac{10}{18}, & \text{if X=0}\\ 
 		\frac{8}{18}, & \text{if X=1}
 	\end{cases}\\
-\text{For X=0, } p_{Y|X}\brak{Y}&=
-\begin{cases}
-       \frac{4}{10}, & \text{if Y=0}\\
-       \frac{6}{10}, & \text{if Y=1}
-\end{cases}\\
-\text{For X=1, } p_{Y|X}\brak{Y}&=
-\begin{cases}
-       \frac{5}{8}, & \text{if Y=0}\\
-       \frac{3}{8}, & \text{if Y=1}
-\end{cases}
+\pr{Y=0|X=1}&=\frac{5}{8}\\
+\pr{Y=1|X=1}&=\frac{3}{8}\\
+\pr{Y=0|X=0}&=\frac{4}{10}\\
+\pr{Y=1|X=0}&=\frac{6}{10}
 \end{align}
 \begin{enumerate}
 \item $p_X\brak{1}=\frac{8}{18}$
 \item $p_X\brak{0}=\frac{10}{18}$
-\item $p_{XY}\brak{0,1}=p_{Y|X}\brak{Y=1|X=0}p_{X}\brak{0}\\=\frac{6}{10}\times \frac{10}{18}=\frac{6}{18}$
-\item $p_{XY}\brak{1,0}=p_{Y|X}\brak{Y=0|X=1}p_{X}\brak{1}\\=\frac{5}{8}\times \frac{8}{18}=\frac{5}{18}$
+\item $p_{XY}\brak{0,1}=\pr{Y=1|X=0}p_{X}\brak{0}=\frac{6}{18}$
+\item $p_{XY}\brak{1,0}=\pr{Y=0|X=1}p_{X}\brak{1}=\frac{5}{18}$
 \end{enumerate}
 
 \end{document}
