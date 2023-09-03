@@ -108,22 +108,17 @@ Assignment-4
 \let\vec\mathbf
 
 \textbf{Question 11.16.3.18)}In a non-leap year, the probability of having 53 tuesdays or 53 wednesdays is\\
-\solution
+\solution \\
 Non-leap year=365days\\
 Since in a week 7 days are present,\\
-365days=52weeks+1day
+365days=52weeks+1day\\
+That 1day can be Sun,Mon,Tue,Wed,Thu,Fri,Sat
 \begin{align}
 	 X &=
 	\begin{cases}
-		1, & \text{if that 1day is tuesday}\\ 
+		1, & \text{if that 1day is tuesday or wednesday}\\ 
 		0, & \text{otherwise}
 	\end{cases} \\
-	Y &=
-	\begin{cases}
-		1, & \text{if that 1day is wednesday}\\ 
-		0, & \text{otherwise}
-	\end{cases} \\
-p_X\brak{1}+p_Y\brak{1}&=\frac{1}{7}+\frac{1}{7}\\
-&=\frac{2}{7}
+p_X\brak{1}&=\frac{2}{7}
 \end{align}
 \end{document}
