@@ -108,8 +108,15 @@ Assignment-4
 \let\vec\mathbf
 
 \textbf{Question 11.16.3.18)}In a non-leap year, the probability of having 53 tuesdays or 53 wednesdays is\\
-\solution The number of days in a non-leap year can be expressed as \\ 	
-$$365days=52\times7+1$$
-Since the remaining day can be Tuesday or Wednesday.\\
-The probability of that remaining day being Tuesday or wednesday is $\frac{2}{7}$
+\solution A non-leap year has a total of 365 days, and a week has 7 days.\\
+So it can be expressed as 
+\begin{align}
+365days=52\times7+1day\\
+\implies \text{52 tuesdays or wednesdays}\\
+\text{Random variable X denotes the day of a week}\\
+p_X\brak{k}=\frac{1}{7} \brak{1<k<7}\\
+\text{So the probability of extra day being tuesday or wednesday is}\\
+p_X\brak{3}+p_X\brak{4}=\frac{1}{7}+\frac{1}{7}=\frac{2}{7}
+\end{align}
+
 \end{document}
