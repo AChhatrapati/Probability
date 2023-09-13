@@ -106,38 +106,39 @@ Assignment-5
 \newcommand{\sinc}{\,\text{sinc}\,}
 \newcommand{\rect}{\,\text{rect}\,}
 \let\vec\mathbf
-
-\textbf{Question 12.13.3.32)}Suppose you have two coins which appear identical in your pocket. You know
-that one is fair and one is 2-headed. If you take one out, toss it and get a head,
-what is the probability that it was a fair coin?\\
-\solution
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\textbf{Question 12.13.3.50)}The probability distribution of a discrete random variable X is given as under:
 \begin{table}[ht]
     \centering
-    \caption{Random Variables}
-    \label{table:random-variables}
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-Variable & Value & Description \\
+X & 1 & 2 & 4 & 2A & 3A & 5A  \\
 \hline
-X & 1 & Fair coin \\
- & 0 & 2-headed coin \\ 
-\hline
-Y & 1 & if output is heads \\
- & 0 & if output is tails \\
+\pr{X} & $\frac{1}{2}$ & $\frac{1}{5}$ & $\frac{3}{25}$ & $\frac{1}{10}$ & $\frac{1}{25}$ & $\frac{1}{25}$ \\
 \hline
 \end{tabular} 
 \end{table}\\
-Given,
+Calculate:
+\begin{enumerate}
+\item The value of A if E(X) = 2.94
+\item Variance of X.
+\end{enumerate}
+\solution
+\begin{enumerate}
+\item Since,
 \begin{align}
-\pr{X=1}=\frac{1}{2},\\
-\pr{X=0}=\frac{1}{2},\\
-\pr{Y=1 \mid X=1}=\frac{1}{2},\\
-\pr{Y=1 \mid X=0}=1,
+E(X)&=\sum X\pr{X}\\
+2.94 &= \frac{1}{2}+\frac{2}{5}+\frac{12}{25}+\frac{2A}{10}+\frac{3A}{25}+\frac{5A}{25}\\
+A &= \frac{78}{26}=3
 \end{align}
-The probability of the coin being fair when the output comes as heads is
+\item We know that,
 \begin{align}
-\pr{X=1 \mid Y=1}&=\frac{\pr{Y=1 \mid X=1}\times\pr{X=1}}{\sum_{k=0}^{1}\pr{Y=1 \mid X=k}\times\pr{X=k} }\\
-&=\frac{\frac{1}{2}\times \frac{1}{2}}{1\times \frac{1}{2}+\frac{1}{2}\times \frac{1}{2}} \\
-&=\frac{1}{3}
+Var(X) &= E(X^2)-[E(X)]^2\\
+&= \sum X^2 \pr{X}-[E(X)]^2\\
+&= \frac{1}{2}+\frac{4}{5}+\frac{48}{25}+\frac{4A^2}{10}+\frac{9A^2}{25}+\frac{25A^2}{25}-[2.94]^2\\
+&= \frac{161+88A^2}{50}-[2.94]^2\\
+&= \frac{953}{50}-[2.94]^2\\
+&= 10.4164
 \end{align}
+\end{enumerate}
 \end{document}
