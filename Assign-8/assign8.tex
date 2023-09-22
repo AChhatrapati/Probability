@@ -111,18 +111,19 @@ Assignment-8
 a fair coin to determine his answer to each question. If the coin falls heads, he answer
 true; if it falls tails, he answer false. Find the probability that he answers at least 12
 questions correctly.\\
-\solution
-Let X be a Binomial random variable
+\solution \\
+\textbf{Gaussian}\\
+Let $X$ be a Binomial random variable
 \begin{align}
 X &= \textrm{Bin}\brak{n,p}\\
 &= \textrm{Bin}\brak{20,0.5}
 \end{align}
-The mean $\mu$ of X
+The mean $\mu$ of $X$
 \begin{align}
 \mu &= n\times p\\
 &= 10
 \end{align}
-The variance $\sigma^{2}$ of X
+The variance $\sigma^{2}$ of $X$
 \begin{align}
 \sigma^{2} &= n\times p \times \brak{1-p}\\
 &= 5
@@ -131,17 +132,66 @@ Let
 \begin{align}
 Z &= \frac{X-\mu}{\sigma}
 \end{align}
-Now, Z is a random variable with $\mu=0$ and $\sigma^{2}=1$\\
+Here, Z is a random variable with $\mu=0$ and $\sigma^{2}=1$\\
+Normal-Distribution $f\brak{x}$
+\begin{align}
+	f\brak{x} = \frac{1}{\sqrt{2\pi}} \times e^{-\frac{x^2}{2}}\\
+\end{align}
+The $Q$-function from the Normal-Distribution
+\begin{align}
+	\qfunc{x} &= \pr{Z>x}\\
+	&= \int_{x}^{\infty} \frac{1}{\sqrt{2\pi}} \times e^{-\frac{x^2}{2}}
+\end{align}
 Since
 \begin{align}
 X &\ge 12\\
-\implies Z &\ge \frac{12-\mu}{\sigma}\\
-Z &\ge \frac{2}{\sqrt{5}}\\
-Z &\ge 0.8944\\
-\pr{X \ge 12}&=\pr{Z \ge 0.8944}
+\pr{X \ge 12} &= 1-\pr{X<11.5}
+\end{align}
+Note: An additional of 0.5 correction term is present.\\
+As
+\begin{align}
+X<11.5\\ 
+\implies Z &< \frac{11.5-\mu}{\sigma}\\
+Z &< \frac{1.5}{\sqrt{5}}\\
+Z &< 0.67082\\
+\pr{X \ge 12}&=1-\pr{Z < 0.67}
 \end{align}
 On compution,
 \begin{align}
-\pr{Z \ge 0.8944}&=0.2517
+\pr{Z < 0.67}&=0.74883\\
+\implies \pr{X \ge 12}&= 0.2511
 \end{align}
+\textbf{Binomial}
+\begin{align}
+   X \sim \textrm{Bin}\brak{n,p}
+\end{align}
+The cdf of $X$ is given by
+\begin{align}
+F_X\brak{k} &= \pr{X \le k} \\
+        &=
+\begin{cases}
+0 & k < 0 \\
+\sum_{i=1}^{k}\myvec{n\\i}p^i\brak{1-p}^{n-i} & 1 \le k \le n \\
+1 & k \ge n
+\end{cases}
+\label{eq:cdf-Y}
+\end{align}
+In this case,
+\begin{align}
+p = \frac{1}{2},\ n = 20
+\end{align}
+We require $\pr{X\ge12}$. Since $n = 20$,
+\begin{align}
+\pr{X\ge12} &= 1 - \pr{X<12} \\
+&= F_X\brak{20} - F_X\brak{11} \\
+&= \sum_{k=12}^{20}p_X(k) \\
+&= \sum_{k=12}^{20}\myvec{n\\k}p^k\brak{1-p}^{n-k} \\
+&= 0.2517
+\end{align}
+The graph\\
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{./figs/dist.png}
+\caption{Binomial vs guassian}
+\label{fig:BvG_py}
+\end{figure}
 \end{document}
