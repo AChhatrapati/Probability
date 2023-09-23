@@ -1,8 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import binom, norm
-n = 20 
-p = 0.5  
+
+n = 20
+p = 0.5
 # Number of correct answers to consider
 k = 12
 # Mean and standard deviation of the Gaussian distribution
@@ -19,8 +20,8 @@ probability_at_least_k_binomial = 1 - sum(pmf_binomial[:k])
 
 # Plot the Gaussian distribution as a curve
 plt.plot(x, norm.pdf(x, loc=mean, scale=stddev), color='red', label='Gaussian Distribution')
-# Plot the binomial distribution as points
-plt.scatter(x, pmf_binomial, color='blue', label='Binomial Distribution (Points)', marker='o')
+# Use a stem plot for the binomial distribution
+plt.stem(x, pmf_binomial, linefmt='b-', markerfmt='bo', basefmt=' ', label='Binomial Distribution (Stem)')
 plt.xlabel('Number of Correct Answers')
 plt.ylabel('Probability')
 plt.title('Probability Distribution of Correct Answers')
