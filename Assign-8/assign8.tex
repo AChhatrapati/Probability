@@ -114,7 +114,7 @@ questions correctly.\\
 \solution \\
 \begin{table}[ht]
     \centering
-    \caption{Random Variables}
+    \caption{Variables}
     \label{table:random-variables-9.3.4}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -122,27 +122,24 @@ Variable & Value & Description \\
 \hline
 $X$ & $0 \le X \le 20$ & Number of correct questions \\
 \hline
+n & 20 & Number of questions\\
+\hline
+p & 0.5 & probability of question being correct\\
+\hline
+$\mu$ & 10 & $n\times p$\\
+\hline
+$\sigma$ & $\sqrt{5}$ & $\sqrt{n\times p\times \brak{1-p}}$\\
+\hline
 \end{tabular} 
 \end{table}\\
 \textbf{Gaussian}\\
-Here $n=20$ and $p=0.5$\\
-The mean $\mu$ of $X$
+In the table $\mu$ and $\sigma$ are mean and variance respectively.\\
+Central limit theorm:
 \begin{align}
-\mu &= n\times p= 10\\
+\bar{X} &\sim \gauss{\mu}{\frac{\sigma}{\sqrt{n}}}\\
+Z &\approx \frac{X-\mu}{\sigma},\gauss{0}{1}
 \end{align}
-The variance $\sigma^{2}$ of $X$
-\begin{align}
-\sigma^{2} &= n\times p \times \brak{1-p}= 5\\
-\end{align}
-Let
-\begin{align}
-Z &\approx \frac{X-\mu}{\sigma}
-\end{align}
-Here, Z is a random variable with $\gauss{0}{1}$ \\
-Normal-Distribution $f\brak{x}$
-\begin{align}
-	f\brak{x} = \int_{x}^{\infty}\frac{1}{\sqrt{2\pi}} \times e^{-\frac{x^2}{2}}
-\end{align}
+Here, Z is a random variable \\
 The $Q$-function from the Normal-Distribution
 \begin{align}
 	\qfunc{x} &= \pr{Z>x}
@@ -155,7 +152,6 @@ X &\ge 12
 \item With a 0.5 correction:
 \begin{align}
 \pr{X \ge 12} &= 1-\pr{X<11.5}\\
-X&<11.5\\ 
 \implies Z &< \frac{11.5-\mu}{\sigma}\\
 Z &< \frac{1.5}{\sqrt{5}}\\
 Z &< 0.67082\\
@@ -179,13 +175,13 @@ Z &\ge 0.894\\
 \textbf{Binomial}
 \begin{align}
 \pr{X\ge12} &= 1 - \pr{X<12} \\
-&= \sum_{k=12}^{20}\myvec{n\\k}p^k\brak{1-p}^{n-k} \\
+&= \sum_{k=12}^{20}\comb{n}{k}p^k\brak{1-p}^{n-k} \\
 &= 0.2517
 \end{align}
-The graph\\
-\begin{figure}[h]
+\begin{figure}[!ht]
+\centering
 \includegraphics[width=\columnwidth]{./figs/dist.png}
-\caption{Binomial vs guassian}
+\caption{Binomial vs Gaussian}
 \label{fig:BvG_py}
 \end{figure}
 \end{document}
