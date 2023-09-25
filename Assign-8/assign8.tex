@@ -136,42 +136,24 @@ $\sigma$ & $\sqrt{5}$ & $\sqrt{n\times p\times \brak{1-p}}$\\
 In the table $\mu$ and $\sigma$ are mean and variance respectively.\\
 Central limit theorm:
 \begin{align}
-\bar{X} &\sim \gauss{\mu}{\frac{\sigma}{\sqrt{n}}}\\
+Y &\sim \gauss{\mu}{\frac{\sigma}{\sqrt{n}}}\\
+Y &\sim \gauss{10}{\frac{1}{2}}\\
 Z &\approx \frac{X-\mu}{\sigma},\gauss{0}{1}
 \end{align}
 Here, Z is a random variable \\
+The CDF of Y:
+\begin{align}
+F_Y\brak{k}&=\int_{-\infty}^{x}f\brak{x}dx\\
+&=1-\int_{x}^{\infty}f\brak{x}dx\\
+&=1-\qfunc{x}\\
+\pr{X \ge 12}&=1-\pr{X < 12}
+\end{align}
 The $Q$-function from the Normal-Distribution
 \begin{align}
-	\qfunc{x} &= \pr{Z>x}
+\qfunc{x} &= \int_{x}^{\infty} \frac{1}{\sqrt{2\pi}} \times e^{-\frac{x^2}{2}} \\
+\pr{X \ge 12} &= 1-\qfunc{0.67}\\
+\pr{X \ge 12} &= 0.2511
 \end{align}
-Since
-\begin{align}
-X &\ge 12
-\end{align}
-\begin{enumerate}
-\item With a 0.5 correction:
-\begin{align}
-\pr{X \ge 12} &= 1-\pr{X<11.5}\\
-\implies Z &< \frac{11.5-\mu}{\sigma}\\
-Z &< \frac{1.5}{\sqrt{5}}\\
-Z &< 0.67082\\
-\pr{X \ge 12}&=1-\pr{Z < 0.67}
-\end{align}
-On compution,
-\begin{align}
-\pr{Z < 0.67}&=0.74883\\
-\implies \pr{X \ge 12}&= 0.2511
-\end{align}
-\item Without correction:
-\begin{align}
-X &\ge 12\\
-Z &\ge \frac{12-\mu}{\sigma}\\
-Z &\ge \frac{2}{\sqrt{5}}\\
-Z &\ge 0.894\\
-\pr{X \ge 12}&=\pr{Z \ge 0.894}\\
-&=0.1855
-\end{align}
-\end{enumerate}
 \textbf{Binomial}
 \begin{align}
 \pr{X\ge12} &= 1 - \pr{X<12} \\
