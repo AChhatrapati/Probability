@@ -120,40 +120,36 @@ questions correctly.\\
 \hline
 Variable & Value & Description \\
 \hline
-$X$ & $0 \le X \le 20$ & Number of correct questions \\
-\hline
 n & 20 & Number of questions\\
 \hline
 p & 0.5 & probability of question being correct\\
 \hline
-$\mu$ & 10 & $n\times p$\\
+$\mu=np$ & 10 & mean of distribution\\
 \hline
-$\sigma$ & $\sqrt{5}$ & $\sqrt{n\times p\times \brak{1-p}}$\\
+$\sigma=\sqrt{npq}$ & $\sqrt{5}$ & variance of distribution\\
+\hline
+$X$ & $0 \le X \le 20$ & Number of correct questions \\
 \hline
 \end{tabular} 
 \end{table}\\
 \textbf{Gaussian}\\
-In the table $\mu$ and $\sigma$ are mean and variance respectively.\\
-Central limit theorm:
 \begin{align}
-Y &\sim \gauss{\mu}{\frac{\sigma}{\sqrt{n}}}\\
-Y &\sim \gauss{10}{\frac{1}{2}}\\
-Z &\approx \frac{X-\mu}{\sigma},\gauss{0}{1}
+X &\approx Y \sim \gauss{10}{5}
 \end{align}
-Here, Z is a random variable \\
-The CDF of Y:
+\begin{enumerate}
+\item With a 0.5 correction:
 \begin{align}
-F_Y\brak{k}&=\int_{-\infty}^{x}f\brak{x}dx\\
-&=1-\int_{x}^{\infty}f\brak{x}dx\\
-&=1-\qfunc{x}\\
-\pr{X \ge 12}&=1-\pr{X < 12}
+\pr{Y \ge 12} &= \qfunc{\frac{11.5-\mu}{\sigma}}\\
+\pr{Y \ge 12} &= \qfunc{0.3\times\sqrt{5}}=\qfunc{0.67}\\
+\implies \pr{Y \ge 12} &= 0.2511
 \end{align}
-The $Q$-function from the Normal-Distribution
+\item Without correction:
 \begin{align}
-\qfunc{x} &= \int_{x}^{\infty} \frac{1}{\sqrt{2\pi}} \times e^{-\frac{x^2}{2}} \\
-\pr{X \ge 12} &= 1-\qfunc{0.67}\\
-\pr{X \ge 12} &= 0.2511
+\pr{Y \ge 12} &= \qfunc{\frac{12-\mu}{\sigma}}\\
+\pr{Y \ge 12} &= \qfunc{0.894}\\
+\implies \pr{Y \ge 12} &= 0.1855
 \end{align}
+\end{enumerate}
 \textbf{Binomial}
 \begin{align}
 \pr{X\ge12} &= 1 - \pr{X<12} \\
