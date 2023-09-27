@@ -137,17 +137,24 @@ $X$ & $0 \le X \le 20$ & Number of correct questions \\
 X &\approx Y \sim \gauss{10}{5}
 \end{align}
 \begin{enumerate}
-\item With a 0.5 correction:
-\begin{align}
-\pr{Y \ge 12} &= \qfunc{\frac{11.5-\mu}{\sigma}}\\
-\pr{Y \ge 12} &= \qfunc{0.3\times\sqrt{5}}=\qfunc{0.67}\\
-\implies \pr{Y \ge 12} &= 0.2511
-\end{align}
 \item Without correction:
 \begin{align}
-\pr{Y \ge 12} &= \qfunc{\frac{12-\mu}{\sigma}}\\
-\pr{Y \ge 12} &= \qfunc{0.894}\\
-\implies \pr{Y \ge 12} &= 0.1855
+\pr{Y > 11} &= 1-\pr{Y \le 11}\\
+&= 1-F_Y\brak{11}\\
+F_Y\brak{x} &= \pr{Y \le x}\\
+&= \pr{\frac{Y-\mu}{\sigma} \le \frac{X-\mu}{\sigma}}\\
+\frac{Y-\mu}{\sigma} &\sim \gauss{0}{1}\\
+&= 1-\pr{\frac{Y-\mu}{\sigma} > \frac{X-\mu}{\sigma}}\\
+&= 1-\qfunc{\frac{X-\mu}{\sigma}}\\
+\implies \pr{Y > 11} &= \qfunc{\frac{X-\mu}{\sigma}}\\
+&= \qfunc{0.894}\\
+\pr{Y > 11} &= 0.1855
+\end{align}
+\item With a 0.5 correction:
+\begin{align}
+\pr{Y > 11} &= \qfunc{\frac{X-\mu+0.5}{\sigma}}\\
+&= \qfunc{0.67}\\
+\implies \pr{Y > 11} &= 0.2511
 \end{align}
 \end{enumerate}
 \textbf{Binomial}
