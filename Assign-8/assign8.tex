@@ -132,20 +132,23 @@ $X$ & $0 \le X \le 20$ & Number of correct questions \\
 \hline
 \end{tabular} 
 \end{table}\\
-\textbf{Gaussian}\\
+\textbf{Gaussian:}\\
 \begin{align}
 X &\approx Y \sim \gauss{10}{5}
+\end{align}
+CDF of Y is defined as:
+\begin{align}
+F_Y\brak{x} &= \pr{Y \le x}\\
+&= \pr{\frac{Y-\mu}{\sigma} \le \frac{X-\mu}{\sigma}}\\
+\frac{Y-\mu}{\sigma} &\sim \gauss{0}{1}\\
+&= 1-\pr{\frac{Y-\mu}{\sigma} > \frac{X-\mu}{\sigma}}\\
+&= 1-\qfunc{\frac{X-\mu}{\sigma}}
 \end{align}
 \begin{enumerate}
 \item Without correction:
 \begin{align}
 \pr{Y > 11} &= 1-\pr{Y \le 11}\\
 &= 1-F_Y\brak{11}\\
-F_Y\brak{x} &= \pr{Y \le x}\\
-&= \pr{\frac{Y-\mu}{\sigma} \le \frac{X-\mu}{\sigma}}\\
-\frac{Y-\mu}{\sigma} &\sim \gauss{0}{1}\\
-&= 1-\pr{\frac{Y-\mu}{\sigma} > \frac{X-\mu}{\sigma}}\\
-&= 1-\qfunc{\frac{X-\mu}{\sigma}}\\
 \implies \pr{Y > 11} &= \qfunc{\frac{X-\mu}{\sigma}}\\
 &= \qfunc{0.894}\\
 \pr{Y > 11} &= 0.1855
@@ -157,7 +160,7 @@ F_Y\brak{x} &= \pr{Y \le x}\\
 \implies \pr{Y > 11} &= 0.2511
 \end{align}
 \end{enumerate}
-\textbf{Binomial}
+\textbf{Binomial:}
 \begin{align}
 \pr{X\ge12} &= 1 - \pr{X<12} \\
 &= \sum_{k=12}^{20}\comb{n}{k}p^k\brak{1-p}^{n-k} \\
