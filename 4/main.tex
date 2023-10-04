@@ -1,4 +1,4 @@
-
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -111,7 +111,8 @@ Assignment-8
 a fair coin to determine his answer to each question. If the coin falls heads, he answer
 true; if it falls tails, he answer false. Find the probability that he answers at least 12
 questions correctly.\\
-\solution \\
+\solution 
+\fi
 \begin{table}[ht]
     \centering
     \caption{Variables}
@@ -131,8 +132,8 @@ $\sigma=\sqrt{npq}$ & $\sqrt{5}$ & variance of distribution\\
 $X$ & $0 \le X \le 20$ & Number of correct questions \\
 \hline
 \end{tabular} 
-\end{table}\\
-\textbf{Gaussian:}\\
+\end{table}
+\textbf{Gaussian:}
 \begin{align}
 Y \sim \gauss{\mu}{\sigma^2}
 \end{align}
@@ -170,6 +171,6 @@ F_Y\brak{x} &= \pr{Y \le x}\\
 \centering
 \includegraphics[width=\columnwidth]{./figs/dist.png}
 \caption{Binomial vs Gaussian}
-\label{fig:BvG_py}
+\label{fig:BvG_py-9.3.4}
 \end{figure}
-\end{document}
+
