@@ -128,12 +128,9 @@ p_{21} & p_{22} & p_{23} \\
 p_{31} & p_{32} & p_{33}}
 \end{align}
 \begin{align}
-\pr{X_2=1|X_1=1,X_3=2} &= p_{X_2,X_1}(1,1)
+\pr{X_2=1|X_1=1,X_3=2} &= \pr{X_2=1|X_1=1}\\
+&=p_{11}\\
+&=0.5
 \end{align}
-(by markov's property)\\
-Let's calculate $p_{X_2,X_1}(1,1)$ using transition probability matrix
-\begin{align}
-\implies p_{X_2,X_1}(1,1) = p_{11} &= \frac{1}{2}\\
-\implies \pr{X_2=1|X_1=1,X_3=2} &= 0.5
-\end{align}
+(by markov's property and using transition probability matrix)
 \end{document}
