@@ -110,15 +110,33 @@ Assignment-7
 \textbf{Question 63.2023)}Suppose from the estimation of a linear regression model
 $$Y_i=\beta_0+\beta_1X_i+e_i$$
 the residual sum of squares and the total sum of squares are obtained as 44 and 80, respectively. The value of coefficient of determination is \\ (round off to two decimal places).\\
-\solution\\
-Residual sum of squares(RSS):Measures the level of variance in the error term, or residuals, of a regression model.
-$$RSS=\sum \brak{y_i-\hat{y}}^2$$
-Total sum of squares(TSS):A variation of the values of a dependent variable from the sample mean of the dependent variable.
-$$TSS=\sum \brak{y_i-\bar{y}}^2$$
-Coeffiecient of determination
+\solution
+$$Y_i=\beta_0+\beta_1X_i+e_i$$
+Here \\
+$Y_i$ = Dependent variable\\
+$\beta_0 , \beta_1$ = Constant parameters\\
+$X_i$ = Independant variables\\
+$e_i$ = Error term\\
+Residual sum of squares(RSS):It measures the extent of variability of observed data not predicted by the regression model. That is it estimates the variance in residual or error term's. 
+\begin{align}
+RSS &= \sum e_i^2 \\
+ &= \sum \brak{Y_i-\beta_0-\beta_1X_i}^2
+\end{align}
+Total sum of squares(TSS):It measures the amount of variation measures in observed data. It is a measure of deviation from the mean. A low total sum of squares indicates little variation between data sets while a higher one indicates more variation. 
+\begin{align}
+TSS &= \sum \brak{Y_i-\bar{Y}}^2
+\end{align}
+where $\bar{Y}$ = Mean of data\\
+Coeffiecient of determination($R^2$):It is the proportion of the variance in the dependent variable that is predicted from the independent variable. It indicates the level of variation in the given data set.
 \begin{align}
 R^2 &= 1-\frac{RSS}{TSS}\\
 &= 1-\frac{44}{80}\\
 &=0.45
 \end{align}
+45 percent of the variance in the Y variable is predicted from the X variable.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{./figs/RSS.png}
+\label{fig:xh_63.2023}
+\end{figure}
 \end{document}
