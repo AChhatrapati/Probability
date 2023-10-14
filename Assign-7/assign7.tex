@@ -133,17 +133,19 @@ $e_i$ & Error term \\
 \hline
 \end{tabular} 
 \end{table}\\
-\textbf{Residual sum of squares(RSS):}It measures the extent of variability of observed data not predicted by the regression model. That is it estimates the variance in residual or error term's. 
+Residual sum of squares(RSS):It measures the extent of variability of observed data not predicted by the regression model. That is it estimates the variance in residual or error term's. \\
 \begin{align}
-RSS &= \sum e_i^2 \\
- &= \sum \brak{Y_i-\beta_0-\beta_1X_i}^2
+RSS &= \sum \brak{Y_i-\hat{Y}} \\
+    &= \sum e_i^2 \\
+    &= \sum \brak{Y_i-\beta_0-\beta_1X_i}^2
 \end{align}
-\textbf{Total sum of squares(TSS):}It measures the amount of variation measures in observed data. It is a measure of deviation from the mean. A low total sum of squares indicates little variation between data sets while a higher one indicates more variation. 
+Here $\hat{Y}$ is the value of Y on the line of regression.\\
+Total sum of squares(TSS):It measures the amount of variation measures in observed data. It is a measure of deviation from the mean. A low total sum of squares indicates little variation between data sets while a higher one indicates more variation. 
 \begin{align}
 TSS &= \sum \brak{Y_i-\bar{Y}}^2
 \end{align}
 where $\bar{Y}$ = Mean of data\\
-\textbf{Coeffiecient of determination($R^2$):}It is the proportion of the variance in the dependent variable that is predicted from the independent variable. It indicates the level of variation in the given data set.
+Coeffiecient of determination($R^2$):It is the proportion of the variance in the dependent variable that is predicted from the independent variable. It indicates the level of variation in the given data set.
 \begin{align}
 R^2 &= 1-\frac{RSS}{TSS}\\
 &= 1-\frac{44}{80}\\
