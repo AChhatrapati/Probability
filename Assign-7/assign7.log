@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.3)  14 OCT 2023 18:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.3)  15 OCT 2023 12:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1193,27 +1193,22 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 1
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 116--138
-
- []
-
 <./figs/RSS.png, id=7, 462.528pt x 346.896pt>
 File: ./figs/RSS.png Graphic file (type png)
 <use ./figs/RSS.png>
-Package pdftex.def Info: ./figs/RSS.png  used on input line 162.
+Package pdftex.def Info: ./figs/RSS.png  used on input line 166.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./figs/RSS.png>]
-(./assign7.aux)
+ <./figs/RSS.png>] (./assign7.aux)
 Package rerunfilecheck Info: File `assign7.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29101 strings out of 478287
- 574063 string characters out of 5849290
- 837455 words of memory out of 5000000
+ 29103 strings out of 478287
+ 574081 string characters out of 5849290
+ 838455 words of memory out of 5000000
  46676 multiletter control sequences out of 15000+600000
  539288 words of font info for 172 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1227,10 +1222,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on assign7.pdf (1 page, 75174 bytes).
+Output written on assign7.pdf (1 page, 75930 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
+ 80 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
+ 14 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
